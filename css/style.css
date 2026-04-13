@@ -840,6 +840,22 @@ p { margin-bottom: 1em; }
   max-width: 300px;
   line-height: 1.7;
 }
+.footer-contact-inline {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+.footer-contact-inline a,
+.footer-contact-inline .footer-location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: .85rem;
+  color: rgba(255,255,255,.5);
+  text-decoration: none;
+}
+.footer-contact-inline a:hover { color: rgba(255,255,255,.9); }
 .footer h4 {
   color: rgba(255,255,255,.9);
   font-size: .8rem;
