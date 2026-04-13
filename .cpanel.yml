@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home6/ddrosiba/impressomedia.lv/
+    - /bin/cp -R * $DEPLOYPATH
