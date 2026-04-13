@@ -1,0 +1,1 @@
+- [No emojis, professional design](feedback_design.md) — Use SVG icons, Unsplash photos, no generic templates
