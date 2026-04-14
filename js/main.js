@@ -67,13 +67,41 @@
       e.preventDefault();
       var btn = contactForm.querySelector('.btn');
       var originalText = btn.textContent;
-      btn.textContent = 'Nosūtīts!';
-      btn.style.background = '#10b981';
-      setTimeout(function () {
-        btn.textContent = originalText;
-        btn.style.background = '';
-        contactForm.reset();
-      }, 3000);
+      btn.textContent = 'Sūta...';
+      btn.disabled = true;
+
+      fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { 'Accept': 'application/json' }
+      }).then(function (response) {
+        if (response.ok) {
+          btn.textContent = 'Nosūtīts!';
+          btn.style.background = '#10b981';
+          contactForm.reset();
+          setTimeout(function () {
+            btn.textContent = originalText;
+            btn.style.background = '';
+            btn.disabled = false;
+          }, 3000);
+        } else {
+          btn.textContent = 'Kļūda. Mēģiniet vēlreiz.';
+          btn.style.background = '#ef4444';
+          setTimeout(function () {
+            btn.textContent = originalText;
+            btn.style.background = '';
+            btn.disabled = false;
+          }, 3000);
+        }
+      }).catch(function () {
+        btn.textContent = 'Kļūda. Mēģiniet vēlreiz.';
+        btn.style.background = '#ef4444';
+        setTimeout(function () {
+          btn.textContent = originalText;
+          btn.style.background = '';
+          btn.disabled = false;
+        }, 3000);
+      });
     });
   }
 
