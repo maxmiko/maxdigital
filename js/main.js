@@ -111,4 +111,20 @@
     span.textContent = new Date().getFullYear();
   });
 
+  // --- Cookie Banner ---
+  var cookieBanner = document.getElementById('cookieBanner');
+  if (cookieBanner && !localStorage.getItem('cookieConsent')) {
+    setTimeout(function () {
+      cookieBanner.classList.add('visible');
+    }, 800);
+    document.getElementById('cookieAccept').addEventListener('click', function () {
+      localStorage.setItem('cookieConsent', 'accepted');
+      cookieBanner.classList.remove('visible');
+    });
+    document.getElementById('cookieDecline').addEventListener('click', function () {
+      localStorage.setItem('cookieConsent', 'declined');
+      cookieBanner.classList.remove('visible');
+    });
+  }
+
 })();
