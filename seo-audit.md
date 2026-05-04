@@ -12,7 +12,7 @@
 
 ## Meta Description
 
-- [ ] `[Fail]` Too long (~191 chars): `"MaxDigital — profesionāli digitālā mārketinga pakalpojumi Latvijā. Google Ads, Meta, Facebook, Instagram un TikTok reklāma. 13+ gadu pieredze, 150+ veiksmīgi projekti. Maksims Misiņko, Rīga."`
+- [ ] `[Fail]` Too long (~191 chars): `"MaxDigital — profesionāli digitālā mārketinga pakalpojumi Latvijā. Google Ads, Meta, Facebook, Instagram un TikTok reklāma. 13+ gadu pieredze, 150+ veiksmīgi projekti. Maksims Miščenko, Rīga."`
 - [ ] Target: 150–160 chars.
 
 ## Headings
