@@ -1748,6 +1748,72 @@ a.service-type-card:hover .stc-link { text-decoration: underline; }
   .home-pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin: 48px auto 0; }
 }
 
+/* Inline contextual banners inside blog posts */
+.inline-banner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--bg-cool);
+  border-left: 3px solid var(--primary);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 14px 18px;
+  margin: 28px 0;
+  color: inherit;
+  text-decoration: none;
+  transition: background .2s var(--ease), border-color .2s var(--ease);
+}
+.inline-banner:hover { background: var(--primary-light); color: inherit; }
+.inline-banner-icon {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  background: var(--primary-light);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+}
+.inline-banner-text { flex: 1; min-width: 0; }
+.inline-banner-text strong {
+  display: block;
+  font-size: .875rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 2px;
+  font-family: 'DM Sans', sans-serif;
+}
+.inline-banner-text span {
+  display: block;
+  font-size: .8125rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+.inline-banner-arrow {
+  flex-shrink: 0;
+  color: var(--primary);
+  opacity: .7;
+}
+/* Meta variant */
+.inline-banner.ib-meta { border-left-color: #1877f2; }
+.inline-banner.ib-meta .inline-banner-icon { background: #e7f0fd; color: #1877f2; }
+.inline-banner.ib-meta:hover { background: #f0f5ff; }
+.inline-banner.ib-meta .inline-banner-arrow { color: #1877f2; }
+/* Remarketing / cyan variant */
+.inline-banner.ib-remarketing { border-left-color: var(--accent); }
+.inline-banner.ib-remarketing .inline-banner-icon { background: #e0f9fd; color: var(--accent); }
+.inline-banner.ib-remarketing:hover { background: #f0fdff; }
+.inline-banner.ib-remarketing .inline-banner-arrow { color: var(--accent); }
+/* TikTok variant */
+.inline-banner.ib-tiktok { border-left-color: #fe2c55; }
+.inline-banner.ib-tiktok .inline-banner-icon { background: #fef0f3; color: #fe2c55; }
+.inline-banner.ib-tiktok:hover { background: #fff5f7; }
+.inline-banner.ib-tiktok .inline-banner-arrow { color: #fe2c55; }
+@media (max-width: 560px) {
+  .inline-banner { gap: 12px; padding: 12px 14px; }
+  .inline-banner-icon { width: 32px; height: 32px; border-radius: 8px; }
+}
+
 /* Term links — subtle dashed underline for SEO internal links */
 .term-link {
   color: inherit;
