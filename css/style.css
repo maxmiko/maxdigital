@@ -1748,6 +1748,20 @@ a.service-type-card:hover .stc-link { text-decoration: underline; }
   .home-pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin: 48px auto 0; }
 }
 
+/* Term links — subtle dashed underline for SEO internal links */
+.term-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-decoration-color: #c0c0c8;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+.term-link:hover {
+  color: inherit;
+  text-decoration-color: #9ca3af;
+}
+
 /* SLP responsive */
 @media (max-width: 900px) {
   .service-types-grid { grid-template-columns: repeat(3, 1fr); }
